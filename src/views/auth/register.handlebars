@@ -1,0 +1,35 @@
+{{#each errors}}
+
+<div class="alert alert-danger">{{text}}</div>
+
+{{else}}
+
+{{/each}}
+
+<h3>Crie sua conta</h3>
+<div class="card">
+    <div class="card-body">
+        <form action="/auth/criar/conta" method="post" autocomplete="off">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" name="nome" placeholder="Nome" aria-label="Nome" aria-describedby="basic-addon1" required>
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" name="email" placeholder="Email" aria-label="Email" aria-describedby="basic-addon2" required>
+                <span class="input-group-text" id="basic-addon2">@example.com</span>
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="password"  class="form-control" name="senha" placeholder="Senha" aria-label="Senha" aria-describedby="basic-addon1" required>
+            </div>
+
+              <div class="input-group mb-3">
+                <input type="password" class="form-control" name="senha2" placeholder="Repita sua senha" aria-label="senha2" aria-describedby="basic-addon1" required>
+            </div>
+
+            <br>
+
+            <button class="btn btn-dark" type="submit">Criar Conta</button>
+        </form>
+    </div>
+</div>

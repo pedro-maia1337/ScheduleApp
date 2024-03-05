@@ -1,0 +1,21 @@
+{{#each errors}}
+    <div class="alert alert-danger">{{text}}</div>
+{{else}}
+{{/each}}
+
+<h3>Seus Contatos</h3>
+<p>Abaixo estão seus contatos</p>
+{{#each contacts}}
+    <div class="card">
+        <div class="card-body">
+            <p>{{nome}}</p>
+            <p>{{sobrenome}}</p>
+            <p>{{email}}</p>
+            <p>{{telefone}}</p>
+            <a href="/usuarios/editar/{{_id}}"><button class="btn btn-dark mt-4">Editar Contato</button></a>
+            <a href="/usuarios/deletar/{{_id}}"><button class="btn btn-danger mt-4">Deletar Contato</button></a>
+        </div>
+    </div>
+{{else}}
+<p>Nenhuma postagem registrada</p>
+{{/each}}

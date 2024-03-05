@@ -1,0 +1,35 @@
+{{#each errors}}
+    <div class="alert alert-danger">{{text}}</div>
+{{else}}
+
+{{/each}}
+
+<h3>Editar contato</h3>
+<div class="card">
+    <div class="card-body">
+        <form action="/usuarios/editar/contato" method="post" autocomplete="off">
+            <input type="hidden" name="id" value="{{contact._id}}">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="nome" placeholder="Nome" name="nome" value="{{contact.nome}}">
+                <label for="nome">Nome</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="sobrenome" placeholder="Sobrenome" name="sobrenome" value="{{contact.sobrenome}}" >
+                <label for="sobrenome">Sobrenome</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="email" placeholder="Email" name="email" value="{{contact.email}}">
+                <label for="email">Email</label>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="telefone" placeholder="telefone" name="telefone" value="{{contact.telefone}}">
+                <label for="telefone">Telefone</label>
+            </div>
+
+            <button class="btn btn-dark mt-4" type="submit">Editar Contato</button>
+        </form>
+    </div>
+</div>
